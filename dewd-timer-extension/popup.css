@@ -1,0 +1,122 @@
+@font-face {
+  font-family: 'DS-Digital';
+  font-weight: 700;
+  font-style: italic;
+  src: url('DS-Digital-Bold.woff2') format('woff2'),
+       url('DS-Digital-Bold.woff') format('woff'),
+       url('DS-DIGIB.TTF') format('truetype');
+}
+
+@font-face {
+  font-family: 'OhnoSoftie';
+  font-weight: 700;
+  src: url('OhnoSoftie-Bold.woff2') format('woff2'),
+       url('OhnoSoftie-Bold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'OhnoSoftie';
+  font-weight: 500;
+  src: url('OhnoSoftie-Medium.woff2') format('woff2'),
+       url('OhnoSoftie-Medium.woff') format('woff');
+}
+
+/* ── Reset ── */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  background: #000;
+  width: 320px;
+  /* height is determined by content */
+  overflow: hidden;
+  user-select: none;
+}
+
+/* ── Popup shell ── */
+.popup {
+  width: 320px;
+  background: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding: 12px 12px 10px;
+  gap: 10px;
+}
+
+/* ── Face + clock SVG unit ── */
+.face-unit {
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff; /* fallback, SVG rect covers it */
+  flex-shrink: 0;
+}
+
+.face-unit svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* ── Button row ── */
+.btn-row {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  flex: 1;
+  height: 40px;
+  border: none;
+  border-radius: 6px;
+  font-family: 'OhnoSoftie', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+  background: #1a1a1a;
+  color: #fff;
+  transition: background 0.12s, transform 0.08s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn:active {
+  transform: scale(0.95);
+}
+
+.btn-start {
+  background: #fff;
+  color: #000;
+}
+
+.btn-start:hover {
+  background: #e8e8e8;
+}
+
+.btn-reset {
+  background: #1a1a1a;
+  color: #fff;
+}
+
+.btn-reset:hover {
+  background: #2a2a2a;
+}
+
+/* ── Footer ── */
+.footer {
+  font-family: 'OhnoSoftie', sans-serif;
+  font-weight: 500;
+  font-size: 9px;
+  color: #444;
+  letter-spacing: 0.06em;
+  text-align: center;
+  text-transform: uppercase;
+  padding-bottom: 2px;
+}
